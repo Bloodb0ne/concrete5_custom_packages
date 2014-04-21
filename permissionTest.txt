@@ -1,0 +1,4 @@
+Loader::model('attribute_permissions','attribute_permissions');
+//$model = new AttributePermissions();
+
+var_dump(AttributePermissions::getPermissions($entry['akID'],$entry['groupID']));

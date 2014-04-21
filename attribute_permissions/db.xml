@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <table name="attributePermissions">
+    	<field name="permID" type="I">
+            <key />
+            <unsigned />
+            <autoincrement />
+            <constraint>
+                , UNIQUE (`groupID`,`akID`)
+            </constraint>
+        </field>
+    	<field name="groupID" type="I">
+            <notnull />
+            <unsigned />
+        </field>
+        <field name="akID" type="I">
+            <notnull />
+            <unsigned />
+        </field>
+        <field name='viewPerm' type='L'></field>
+        <field name='editPerm' type='L'></field>
+        <field name='deletePerm' type='L'></field>
+    </table>
+</schema>
