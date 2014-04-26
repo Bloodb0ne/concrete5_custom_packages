@@ -10,6 +10,11 @@ class AttributePermissionsPackage extends Package {
 	protected $appVersionRequired = '5.6';
 	protected $pkgVersion = '1.0';
 	
+	public function on_start(){
+		//Override the attribute actions for view edit and delete
+		$objEnv = Environment::get();
+   		$objEnv->overrideCoreByPackage('models/attribute/key.php', $this);
+	}
 	public function getPackageDescription() {
 		return t("Contains a interface for editing attribute permission.");
 	}
